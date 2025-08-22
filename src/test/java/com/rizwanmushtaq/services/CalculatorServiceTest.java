@@ -1,9 +1,28 @@
 package com.rizwanmushtaq.services;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 public class CalculatorServiceTest {
+  @BeforeClass
+  public static void init() {
+    System.out.println("Initializing CalculatorService tests...");
+  }
+
+  @AfterClass
+  public static void cleanup() {
+    System.out.println("Cleaning up after CalculatorService tests...");
+  }
+
+  @Before
+  public void beforeEach() {
+    System.out.println("Running before each test...");
+  }
+
+  @After
+  public void afterEach() {
+    System.out.println("Running after each test...");
+  }
+
   @Test
   public void addTest() {
     int result = CalculatorService.add(2, 3);
